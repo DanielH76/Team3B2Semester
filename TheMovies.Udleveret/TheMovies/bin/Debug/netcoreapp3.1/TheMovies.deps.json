@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "TheMovies/1.0.0": {
+        "dependencies": {
+          "ModelsCSV": "1.0.0"
+        },
+        "runtime": {
+          "TheMovies.dll": {}
+        }
+      },
+      "ModelsCSV/1.0.0": {
+        "runtime": {
+          "ModelsCSV.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TheMovies/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ModelsCSV/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
