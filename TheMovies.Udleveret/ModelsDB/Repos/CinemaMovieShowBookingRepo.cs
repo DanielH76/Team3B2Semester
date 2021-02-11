@@ -222,6 +222,7 @@ namespace TheMovies.Repos
                 "VALUES (@CinemaName,@CinemaTown,@ShowDateTime,@MovieTitle,@MovieGenre,@MovieDuration,@MovieDirector,@MovieReleaseDate,@BookingMail,@BookingPhone)";
             string commandTextUpdate = "UPDATE CinemaMovieShowBooking SET CinemaName = @CinemaName, CinemaTown = @CinemaTown, ShowDateTime = @ShowDateTime, MovieTitle = @MovieTitle, MovieGenre = @MovieGenre " +
                 "WHERE BookingID = @BookingID;  ";
+            SqlCommand command;
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
                 connect.Open();
@@ -229,52 +230,35 @@ namespace TheMovies.Repos
                 {
                     if (c.BookingID == 0)
                     {
-                        SqlCommand command = new SqlCommand(commandTextInsert, connect);
+                        command = new SqlCommand(commandTextInsert, connect);
 
-                        command.Parameters.AddWithValue("@CinemaName", c.CinemaName != default ? (object)c.CinemaName : DBNull.Value);
-                        command.Parameters.AddWithValue("@CinemaTown", c.CinemaTown != default ? (object)c.CinemaTown : DBNull.Value);
-                        command.Parameters.AddWithValue("@ShowDateTime", c.ShowDateTime.ToString(@"yy-M-d hh:mm") != default ? (object)c.ShowDateTime.ToString(@"yy-M-d hh:mm") : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieTitle", c.MovieTitle != default ? (object)c.MovieTitle : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieGenre", c.MovieGenre != default ? (object)c.MovieGenre : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieDuration", c.MovieDuration != default ? (object)c.MovieDuration : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieDirector", c.MovieDirector != default ? (object)c.MovieDirector : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieReleaseDate", c.MovieReleaseDate.ToString(@"yy-M-d") != default ? (object)c.MovieReleaseDate.ToString(@"yy-M-d") : DBNull.Value);
-                        command.Parameters.AddWithValue("@BookingMail", c.BookingMail != default ? (object)c.BookingMail : DBNull.Value);
-                        command.Parameters.AddWithValue("@BookingPhone", c.BookingPhone != default ? (object)c.BookingPhone : DBNull.Value);
-                        try
-                        {
-                            command.ExecuteNonQuery();
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e);
-                        }
+                        
                     }
                     else
                     {
-                        SqlCommand command = new SqlCommand(commandTextUpdate, connect);
+                        command = new SqlCommand(commandTextUpdate, connect);
 
                         command.Parameters.AddWithValue("@BookingID", c.BookingID);
-                        command.Parameters.AddWithValue("@CinemaName", c.CinemaName != default ? (object)c.CinemaName : DBNull.Value);
-                        command.Parameters.AddWithValue("@CinemaTown", c.CinemaTown != default ? (object)c.CinemaTown : DBNull.Value);
-                        command.Parameters.AddWithValue("@ShowDateTime", c.ShowDateTime.ToString(@"yy-M-d hh:mm") != default ? (object)c.ShowDateTime.ToString(@"yy-M-d hh:mm") : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieTitle", c.MovieTitle != default ? (object)c.MovieTitle : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieGenre", c.MovieGenre != default ? (object)c.MovieGenre : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieDuration", c.MovieDuration != default ? (object)c.MovieDuration : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieDirector", c.MovieDirector != default ? (object)c.MovieDirector : DBNull.Value);
-                        command.Parameters.AddWithValue("@MovieReleaseDate", c.MovieReleaseDate.ToString(@"yy-M-d") != default ? (object)c.MovieReleaseDate.ToString(@"yy-M-d") : DBNull.Value);
-                        command.Parameters.AddWithValue("@BookingMail", c.BookingMail != default ? (object)c.BookingMail : DBNull.Value);
-                        command.Parameters.AddWithValue("@BookingPhone", c.BookingPhone != default ? (object)c.BookingPhone : DBNull.Value);
-                        try
-                        {
-                            command.ExecuteNonQuery();
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e);
-                        }
+                        
                     }
-
+                    command.Parameters.AddWithValue("@CinemaName", c.CinemaName != default ? (object)c.CinemaName : DBNull.Value);
+                    command.Parameters.AddWithValue("@CinemaTown", c.CinemaTown != default ? (object)c.CinemaTown : DBNull.Value);
+                    command.Parameters.AddWithValue("@ShowDateTime", c.ShowDateTime.ToString(@"yy-M-d hh:mm") != default ? (object)c.ShowDateTime.ToString(@"yy-M-d hh:mm") : DBNull.Value);
+                    command.Parameters.AddWithValue("@MovieTitle", c.MovieTitle != default ? (object)c.MovieTitle : DBNull.Value);
+                    command.Parameters.AddWithValue("@MovieGenre", c.MovieGenre != default ? (object)c.MovieGenre : DBNull.Value);
+                    command.Parameters.AddWithValue("@MovieDuration", c.MovieDuration != default ? (object)c.MovieDuration : DBNull.Value);
+                    command.Parameters.AddWithValue("@MovieDirector", c.MovieDirector != default ? (object)c.MovieDirector : DBNull.Value);
+                    command.Parameters.AddWithValue("@MovieReleaseDate", c.MovieReleaseDate.ToString(@"yy-M-d") != default ? (object)c.MovieReleaseDate.ToString(@"yy-M-d") : DBNull.Value);
+                    command.Parameters.AddWithValue("@BookingMail", c.BookingMail != default ? (object)c.BookingMail : DBNull.Value);
+                    command.Parameters.AddWithValue("@BookingPhone", c.BookingPhone != default ? (object)c.BookingPhone : DBNull.Value);
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
 
                 }
             }
