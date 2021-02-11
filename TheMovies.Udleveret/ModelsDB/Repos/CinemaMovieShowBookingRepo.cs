@@ -229,17 +229,11 @@ namespace TheMovies.Repos
                 foreach (var c in entries)
                 {
                     if (c.BookingID == 0)
-                    {
                         command = new SqlCommand(commandTextInsert, connect);
-
-                        
-                    }
                     else
                     {
                         command = new SqlCommand(commandTextUpdate, connect);
-
                         command.Parameters.AddWithValue("@BookingID", c.BookingID);
-                        
                     }
                     command.Parameters.AddWithValue("@CinemaName", c.CinemaName != default ? (object)c.CinemaName : DBNull.Value);
                     command.Parameters.AddWithValue("@CinemaTown", c.CinemaTown != default ? (object)c.CinemaTown : DBNull.Value);
