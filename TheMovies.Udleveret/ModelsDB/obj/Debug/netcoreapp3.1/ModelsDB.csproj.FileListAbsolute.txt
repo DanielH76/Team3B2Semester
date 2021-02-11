@@ -16,3 +16,12 @@ C:\Users\Daniel\Desktop\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\Mod
 C:\Users\Daniel\Desktop\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\Desktop\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.dll
 C:\Users\Daniel\Desktop\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.pdb
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\bin\Debug\netcoreapp3.1\ModelsDB.deps.json
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\bin\Debug\netcoreapp3.1\ModelsDB.dll
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\bin\Debug\netcoreapp3.1\ModelsDB.pdb
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.AssemblyInfo.cs
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.dll
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.pdb
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\ModelsDB\obj\Debug\netcoreapp3.1\ModelsDB.csproj.CoreCompileInputs.cache

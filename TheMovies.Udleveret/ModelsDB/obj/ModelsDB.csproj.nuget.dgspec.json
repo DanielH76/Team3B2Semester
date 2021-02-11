@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Desktop\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj": {}
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Team3B2Semester\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Desktop\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\Team3B2Semester\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\GitHub\\Team3B2Semester\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj",
         "projectName": "ModelsDB",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj",
+        "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Team3B2Semester\\TheMovies.Udleveret\\ModelsDB\\ModelsDB.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\TheMovies.Udleveret\\ModelsDB\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\Documents\\GitHub\\Team3B2Semester\\TheMovies.Udleveret\\ModelsDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

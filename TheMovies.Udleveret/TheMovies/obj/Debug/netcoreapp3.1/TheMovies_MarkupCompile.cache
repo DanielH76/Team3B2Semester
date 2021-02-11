@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Daniel\Desktop\TheMovies.Udleveret\TheMovies\obj\Debug\netcoreapp3.1\
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\TheMovies\obj\Debug\netcoreapp3.1\
 TheMovies
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Daniel\Desktop\TheMovies.Udleveret\TheMovies\App.xaml
+C:\Users\Daniel\Documents\GitHub\Team3B2Semester\TheMovies.Udleveret\TheMovies\App.xaml
 5-819636470
 
 12-513708674
-1931111853113
+194756429617
 Views\AddEditBookingDialog.xaml;Views\AddEditCinemaDialog.xaml;Views\AddEditMovieDialog.xaml;Views\AddEditShowDialog.xaml;Views\MainWindow.xaml;
 
 False
