@@ -41,7 +41,7 @@ namespace TheMovies.Repos
         {
             if (obj.CinemaName != default)
             {
-                bool doesItExist = entries.Any(x => x.ToString() == obj.ToString() && x.ToString() == obj.ToString());
+                bool doesItExist = entries.Any(x => x.ToString() == obj.ToString());
                 if (doesItExist)
                 {
                     throw new Exception();

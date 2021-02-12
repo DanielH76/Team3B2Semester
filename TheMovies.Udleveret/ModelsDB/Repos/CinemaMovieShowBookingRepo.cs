@@ -43,7 +43,7 @@ namespace TheMovies.Repos
         {
             if (obj.CinemaName != default)
             {
-                bool doesItExist = entries.Any(x => x.ToString() == obj.ToString() && x.ToString() == obj.ToString());
+                bool doesItExist = entries.Any(x => x.ToString() == obj.ToString());
                 if (doesItExist)
                 {
                     throw new Exception();
@@ -222,6 +222,7 @@ namespace TheMovies.Repos
                 "VALUES (@CinemaName,@CinemaTown,@ShowDateTime,@MovieTitle,@MovieGenre,@MovieDuration,@MovieDirector,@MovieReleaseDate,@BookingMail,@BookingPhone)";
             string commandTextUpdate = "UPDATE CinemaMovieShowBooking SET CinemaName = @CinemaName, CinemaTown = @CinemaTown, ShowDateTime = @ShowDateTime, MovieTitle = @MovieTitle, MovieGenre = @MovieGenre " +
                 "WHERE BookingID = @BookingID;  ";
+            string commandReturnID = "SELECT @@Identity";
             SqlCommand command;
             using (SqlConnection connect = new SqlConnection(connectionString))
             {
@@ -248,7 +249,21 @@ namespace TheMovies.Repos
                     try
                     {
                         command.ExecuteNonQuery();
+                        if(c.BookingID == 0)
+                        {
+                            SqlCommand newCommand = new SqlCommand(commandReturnID, connect);
+
+                            SqlDataReader reader = newCommand.ExecuteReader();
+
+                            while (reader.Read())
+                            {
+                                c.BookingID = (int)reader.GetDecimal(0);
+                                Console.WriteLine(c.BookingID);
+                            }
+                        }
+                        
                     }
+
                     catch (Exception e)
                     {
                         Console.WriteLine(e);
